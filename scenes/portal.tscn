@@ -1,18 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkl0rdq562w36"]
+[gd_scene load_steps=5 format=3 uid="uid://dkl0rdq562w36"]
 
-[ext_resource type="Script" path="res://portal.cs" id="1_k1p42"]
+[ext_resource type="Script" path="res://code/portal.cs" id="1_kybcu"]
 [ext_resource type="Texture2D" uid="uid://kfavimwcf4a3" path="res://media/Sprite-0001.png" id="2_n2ee1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gelr6"]
+size = Vector2(24, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3xyu"]
 size = Vector2(24, 24)
 
 [node name="Portal" type="Area2D"]
-script = ExtResource("1_k1p42")
+script = ExtResource("1_kybcu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_n2ee1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gelr6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(9.53674e-07, -9.53674e-07)
 shape = SubResource("RectangleShape2D_k3xyu")

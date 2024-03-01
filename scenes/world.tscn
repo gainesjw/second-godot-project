@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://cv452xvl25l3j"]
+
+[ext_resource type="PackedScene" uid="uid://d185plvgdym53" path="res://scenes/player.tscn" id="1_8k3tr"]
+[ext_resource type="TileSet" uid="uid://hy5fdq83hlqi" path="res://media/assets/simple_tileset/simple_tileset.tres" id="2_sg1yf"]
+[ext_resource type="PackedScene" uid="uid://bpnc5b2rb4sl4" path="res://scenes/mob.tscn" id="3_f8qu4"]
+[ext_resource type="AudioStream" uid="uid://cw3f1osib5fc3" path="res://media/bgm/platform-test-song.wav" id="4_e4366"]
+[ext_resource type="PackedScene" uid="uid://dkl0rdq562w36" path="res://scenes/portal.tscn" id="5_u7ok5"]
+[ext_resource type="PackedScene" uid="uid://1l1vwt5rouxb" path="res://scenes/mob_hard.tscn" id="6_qv7vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcect"]
+size = Vector2(10579, 150)
+
+[node name="World" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_8k3tr")]
+position = Vector2(236, 280)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_sg1yf")
+format = 2
+layer_0/tile_data = PackedInt32Array(589831, 0, 3, 589832, 0, 3, 589833, 0, 3, 589834, 0, 3, 589835, 0, 3, 589836, 0, 3, 589837, 0, 3, 589838, 0, 3, 589839, 0, 3, 786434, 0, 3, 786435, 0, 3, 786436, 0, 3, 786437, 0, 3, 786438, 0, 3, 786439, 0, 3, 786440, 0, 3, 786441, 0, 3, 786442, 0, 3, 393234, 0, 3, 393235, 0, 3, 393236, 0, 3, 393237, 0, 3, 393238, 0, 3, 393240, 0, 3, 393241, 0, 3, 393242, 0, 3, 393243, 0, 3, 393244, 0, 3, 851983, 0, 3, 851984, 0, 3, 851985, 0, 3, 851986, 0, 3, 851987, 0, 3, 851988, 0, 3, 851989, 0, 3, 851990, 0, 3, 851991, 0, 3, 851992, 0, 3, 851993, 0, 3, 851994, 0, 3, 786458, 0, 3, 1179656, 0, 3, 1179657, 0, 3, 1179658, 0, 3, 1179659, 0, 3, 1179660, 0, 3, 1179661, 0, 3, 1179662, 0, 3, 1179663, 0, 3, 1179664, 0, 3, 1179665, 0, 3, 1179666, 0, 3, 1179667, 0, 3, 1179668, 0, 3, 1179669, 0, 3, 1179670, 0, 3, 1179671, 0, 3, 1179672, 0, 3, 1179673, 0, 3, 1179674, 0, 3, 1179675, 0, 3, 1179676, 0, 3, 1179648, 0, 3, 1179649, 0, 3, 1179650, 0, 3, 1179651, 0, 3, 1179652, 0, 3, 131095, 0, 3, 131096, 0, 3, 131097, 0, 3, 131098, 0, 3, 131099, 0, 3, 131100, 0, 3, 131101, 0, 3, 196638, 0, 3, 196639, 0, 3, 655376, 0, 3, 983052, 0, 3, 983041, 0, 3, 196630, 0, 3, 1048589, 0, 3, 262165, 0, 3, 720913, 0, 3, 458769, 0, 3, 1048578, 0, 3, 851968, 0, 3, 852028, 0, 3, 852029, 0, 3, 852030, 0, 3, 852031, 0, 3, 852032, 0, 3, 852033, 0, 3, 852034, 0, 3, 852035, 0, 3, 1179705, 0, 3, 1179706, 0, 3, 1179707, 0, 3, 1179708, 0, 3, 1179709, 0, 3, 1179710, 0, 3, 983099, 0, 3, 1048643, 0, 3, 1048644, 0, 3, 1048645, 0, 3, 1048646, 0, 3, 1048647, 0, 3, 1048648, 0, 3, 1048649, 0, 3, 1048650, 0, 3, 1048651, 0, 3, 1048652, 0, 3, 1048653, 0, 3, 1048654, 0, 3, 1048655, 0, 3, 1048656, 0, 3, 1048657, 0, 3, 1048658, 0, 3, 1048659, 0, 3, 1048660, 0, 3, 852043, 0, 3, 852044, 0, 3, 852045, 0, 3, 852046, 0, 3, 720974, 0, 3, 655439, 0, 3, 589904, 0, 3, 589905, 0, 3, 589906, 0, 3, 589907, 0, 3, 589908, 0, 3, 589909, 0, 3, 589910, 0, 3, 589911, 0, 3, 852054, 0, 3, 852055, 0, 3, 917589, 0, 3, 327747, 0, 3, 327748, 0, 3, 327749, 0, 3, 327750, 0, 3, 327751, 0, 3, 327752, 0, 3, 327753, 0, 3, 327754, 0, 3, 327755, 0, 3, 327756, 0, 3, 327757, 0, 3, 327758, 0, 3, 196669, 0, 3, 196670, 0, 3, 196671, 0, 3, 196672, 0, 3, 196673, 0, 3, 196674, 0, 3, 393295, 0, 3, 458832, 0, 3, 65595, 0, 3, 131131, 0, 3, 196667, 0, 3, 65594, 0, 3, 1048634, 0, 3, 1638510, 0, 3, 1572972, 0, 3, 1507435, 0, 3, 1572976, 0, 3, 1507441, 0, 3, 1376363, 0, 3, 1376364, 0, 3, 1376365, 0, 3, 1376366, 0, 3, 1376367, 0, 3, 1376368, 0, 3, 1441907, 0, 3, 1376372, 0, 3, 1310837, 0, 3, 1245302, 0, 3, 1114221, 0, 3, 1114222, 0, 3, 1114223, 0, 3, 1114224, 0, 3, 1114225, 0, 3, 1114226, 0, 3, 1114227, 0, 3, 1114232, 0, 3, 1048697, 0, 3, 983162, 0, 3, 852080, 0, 3, 852081, 0, 3, 852082, 0, 3, 852083, 0, 3, 852084, 0, 3, 852085, 0, 3, 852086, 0, 3, 852087, 0, 3, 786556, 0, 3, 721021, 0, 3, 655486, 0, 3, 655487, 0, 3, 524402, 0, 3, 524403, 0, 3, 524404, 0, 3, 524405, 0, 3, 524406, 0, 3, 524407, 0, 3, 524408, 0, 3, 524409, 0, 3, 524410, 0, 3, 655471, 0, 3, 589934, 0, 3, 524397, 0, 3, 458860, 0, 3, 327786, 0, 3, 262249, 0, 3, 196712, 0, 3, 262272, 0, 3, 262273, 0, 3, 262274, 0, 3, 262275, 0, 3, 262276, 0, 3, 262277, 0, 3, 262278, 0, 3, 262279, 0, 3, 393239, 0, 3, 327806, 0, 3, 524412, 0, 3, 393341, 0, 3)
+
+[node name="DeathBox" type="Area2D" parent="." groups=["DeathBox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBox"]
+position = Vector2(3785.5, 1039)
+shape = SubResource("RectangleShape2D_mcect")
+
+[node name="Stage0_Mob" parent="." instance=ExtResource("3_f8qu4")]
+
+[node name="Stage1_Mob" parent="." instance=ExtResource("3_f8qu4")]
+position = Vector2(1904, 68)
+
+[node name="Stage2_Mob" parent="." instance=ExtResource("3_f8qu4")]
+position = Vector2(3375, 255)
+
+[node name="Stage1_Mob_Hard" parent="." instance=ExtResource("6_qv7vu")]
+position = Vector2(2833, 374)
+
+[node name="Stage2_Mob_Hard" parent="." instance=ExtResource("6_qv7vu")]
+position = Vector2(4228, 367)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e4366")
+volume_db = -5.0
+autoplay = true
+
+[node name="Portal1" parent="." groups=["Portal_1"] instance=ExtResource("5_u7ok5")]
+position = Vector2(1871, 20)
+
+[node name="Portal0" parent="." groups=["Portal_0"] instance=ExtResource("5_u7ok5")]
+position = Vector2(880, 52)
+
+[node name="Win Portal" parent="." groups=["Win"] instance=ExtResource("5_u7ok5")]
+position = Vector2(4321, 116)
